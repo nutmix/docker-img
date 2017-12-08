@@ -15,10 +15,12 @@ RUN wget -c https://github.com/skycoin/skycoin/archive/v0.20.4.tar.gz
 RUN tar zxf v0.20.4.tar.gz -C $GOPATH/src/github.com/skycoin/skycoin/ --strip-components=1
 
 # package
+RUN cd $GOPATH/src/github.com/skycoin/skycoin/cmd/cli && ./install.sh 
 RUN cd $GOPATH/src/github.com/skycoin/skycoin/cmd/skycoin && go install
+RUN cd $GOPATH/src/github.com/skycoin/skycoin/cmd/address_gen && go install
 
 # port
-EXPOSE 4100 6000 6060 6420 6430
+EXPOSE  6000  6420 6430
 
 # run
 CMD $GOPATH/bin/skycoin
