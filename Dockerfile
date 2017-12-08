@@ -20,7 +20,7 @@ RUN cd $GOPATH/src/github.com/skycoin/skycoin/cmd/skycoin && go install
 RUN cd $GOPATH/src/github.com/skycoin/skycoin/cmd/address_gen && go install
 
 # port
-EXPOSE  6000  6420 6430
+EXPOSE 6000 6420 6430
 
 # run
 CMD $GOPATH/bin/skycoin
