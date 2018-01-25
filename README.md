@@ -35,9 +35,11 @@ $ docker run -ti --rm \
     skycoin
 ```
 
-Note: for windows users, use this:
+Note: for windows Git Bash users, use this docker command:
 
+```
 docker run -i --rm -v skycoin-data:/root/.skycoin -v skycoin-wallet:/wallet -p 6000:6000 -p 6420:6420 -p 6430:6430 skycoin
+```
 
 ### API
 
